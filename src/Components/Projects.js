@@ -6,45 +6,11 @@ class Projects extends Component {
 		return (
 			<div className='projects'>
 				<div className='projects-grid'>
-					<div className="project-item">
-						IMAGE GOES HERE
-					</div>
-					<div className="project-item">
-						IMAGE GOES HERE
-					</div>
-					<div className="project-item">
-						IMAGE GOES HERE
-					</div>
-					<div className="project-item">
-						IMAGE GOES HERE
-					</div>
-					<div className="project-item">
-						IMAGE GOES HERE
-					</div>
-					<div className="project-item">
-						IMAGE GOES HERE
-					</div>
-					<div className="project-item">
-						IMAGE GOES HERE
-					</div>
-					<div className="project-item">
-						IMAGE GOES HERE
-					</div>
-					<div className="project-item">
-						IMAGE GOES HERE
-					</div>
-					<div className="project-item">
-						IMAGE GOES HERE
-					</div>
-					<div className="project-item">
-						IMAGE GOES HERE
-					</div>
-					<div className="project-item">
-						IMAGE GOES HERE
-					</div>
-					<div className="project-item">
-						IMAGE GOES HERE
-					</div>
+					{this.props.projects.map((project, i) => {
+						return (
+							<img src={project.imgUrl} key={"project" + i}/>
+						)})
+					}
 				</div>
 			</div>
 		);

@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
 import '../Styles/Skills.scss';
 import '../Styles/Main.scss';
+import Skill from './Skill.js';
 
 class Skills extends Component {
 	state  = {
-		skills: [
-			"Programming - Java",
-			"Programming - C++",
-			"Programming - C#",
-			"Programming - Javascript",
-			"Programming - Actionscript",
-			"Programming - Swift",
-			"Programming - PHP",
-			"Graphics",
-			"Music, Sounds, Audio",
-			"3D Modelling",
-			"2D and 3D Animation",
-			"Concept Art",
-			"Web Development",
-			"Playing Video Games"
+		skills: [ 
+					{
+						name: "Programming - Java",
+						details: "fuck m8"
+					},
+					{
+						name: "Programming - C#",
+						details: "fuck m8"
+					},
+					{
+						name: "Programming - COCK SUCKING",
+						details: "fat 1s"
+					},
+					{
+						name: "Programming - Swift",
+						details: "fuck m8"
+					},
+
+
 		],
 		isVisible: false
 	}
@@ -38,12 +43,14 @@ class Skills extends Component {
 	render() {
 		return (
 			<div className="skills">
-				Skills and Experience <span onClick={this.toggleVisibility}>{ this.state.isVisible ? "🔽" : "▶️" } </span>
-				<div className="hidden skill-list">
+				<h3> Skills and Experience </h3>
+				<div className="skill-list">
 					{this.state.skills.map((skill, i)=>{
 							return (
 								<div key={"skill" + i}>
-									{skill}
+									<Skill 
+										skill={skill}
+									/>
 								</div>
 							)
 					})}

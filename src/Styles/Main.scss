@@ -1,10 +1,19 @@
 .main {
 	.personal {
 		display: flex;
-		width: 90vw;
+		width: 75vw;
 		margin: auto;
+
+		@media (max-width: 1000px) {
+			width: 96vw;
+		} 
 	}
 	.hidden {
 		display: none;
+	}
+
+	.panel-view {
+		margin: auto;
+		padding: 0px 32px;
 	}
 }

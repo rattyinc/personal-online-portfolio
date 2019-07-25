@@ -13,7 +13,7 @@ class ProfileHeader extends Component {
 					<div className='profile-buttons'> 
 						[] [] []
 					</div>
-					<div className='profile-short-description'>Tech developer</div>
+					<div className='profile-short-description'>Full-Stack Game Developer</div>
 					<br/>
 					<div className='nav-button' onClick={() => this.props.toggleView("overview")}>Overview</div>
 					<div className='nav-button' onClick={() => this.props.toggleView("projects")}>Projects</div>

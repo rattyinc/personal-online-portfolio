@@ -8,7 +8,26 @@ import Projects from './Projects';
 
 class Main extends Component {
 	state = {
-		currentView: "overview"
+		currentView: "overview",
+		projects: [
+			{
+				imgUrl: "https://cdn.discordapp.com/attachments/483438846206410779/512525014847848458/BoW_cover_Img.jpg",
+				name: "Body of Work"
+			},
+			{
+				imgUrl: "https://cdn.discordapp.com/attachments/483438846206410779/512525383778697226/gateway_cover_img.jpg",
+				name: "Gateway"
+			},
+			{
+				imgUrl: "https://cdn.discordapp.com/attachments/483438846206410779/512525014847848458/BoW_cover_Img.jpg",
+				name: "Body of Work"
+			},
+			{
+				imgUrl: "https://cdn.discordapp.com/attachments/483438846206410779/512525014847848458/BoW_cover_Img.jpg",
+				name: "Body of Work"
+			},
+			
+		]
 	}
 
 	toggleView = (view) => {
@@ -22,13 +41,15 @@ class Main extends Component {
 	selectedView = () => {
 		switch(this.state.currentView) {
 			case "projects":
-				return	<div>
-							<Projects />
+				return	<div className="panel-view">
+							<Projects 
+								projects={this.state.projects}
+							/>
 						</div>;
 			case "blog":
-				return <div> Blog </div>
+				return <div className="panel-view"> Blog </div>
 			default: 
-				return	<div>
+				return	<div className="panel-view">
 							<Profile />
 							<Stats />
 							<Skills />
@@ -42,10 +63,8 @@ class Main extends Component {
 				<div className="personal">
 					<ProfileHeader 
 						toggleView= {this.toggleView}
-					/> 
-					<div>
-						{this.selectedView()}
-					</div>
+					/>						
+					{this.selectedView()}
 				</div>
 				<div>
 					
