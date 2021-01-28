@@ -1,0 +1,12 @@
+{
+	"Post": {
+		"title": "string",
+		"tracks:" "Comment[]"
+	},
+	"Comment": {
+		"supported-string": "string",
+		"supported-int": "int",
+		"supported-boolean": "boolean",
+		"supported-date": "data",
+	}
+}
